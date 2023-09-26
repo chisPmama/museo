@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 RSpec.describe Artist do
   before(:each) do
     @attributes = {
@@ -21,6 +23,9 @@ RSpec.describe Artist do
       expect(@artist.born).to eq("1902")
       expect(@artist.died).to eq("1984")
       expect(@artist.country).to eq("United States")
+    end
+
+    it 'can calculate age when artist died' do
       expect(@artist.age_at_death).to eq(82)
     end
 

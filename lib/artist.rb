@@ -9,4 +9,7 @@ attr_reader :id, :name, :born, :died, :country
     @country = hash[:country]
   end
 
+  def age_at_death
+    died.to_i - born.to_i
+  end
 end

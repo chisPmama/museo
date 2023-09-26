@@ -1,4 +1,4 @@
-require 'rspec'
+require 'spec_helper'
 
 RSpec.describe Photograph do
   before(:each) do
@@ -13,7 +13,7 @@ RSpec.describe Photograph do
 
   describe '#initialize' do
     it 'exists' do
-      expect(@photograph).to be Photograph
+      expect(@photograph.class).to be Photograph
     end
 
     it 'holds an id number, name, artist ID, and year' do
@@ -23,9 +23,5 @@ RSpec.describe Photograph do
       expect(@photograph.year).to eq("1954")
     end
 
-    it 'can create a ' do
-      expect(@photograph).to be Photograph
-      expect(@photograph.id).to eq("1")
-    end
   end
 end
